@@ -1,4 +1,5 @@
 import React from 'react'
+import { Star } from 'lucide-react';
 
 const VendorCard = () => {
     return (<div className=" flex flex-row surface-container border border-white/10 rounded-2xl overflow-hidden hover:border-amber-600/50 transition-all duration-500 shadow-2xl" href="#">
@@ -14,7 +15,8 @@ const VendorCard = () => {
             <div className="flex justify-between items-start mb-2">
                 <h3 className="text-xl font-black tracking-tight text-black group-hover:text-amber-500 transition-colors">Shree Tiffin Services</h3>
                 <div className="flex items-center gap-1 bg-white/5 px-2 py-1 rounded border border-white/10">
-                    <span className=" text-amber-500 text-xs" style={{ fontVariationSettings: "FILL' 1" }}>star</span>
+                <Star className="w-3 h-3 text-amber-500" />
+                    {/* <a className=" text-amber-500 text-xs" style={{ fontVariationSettings: "FILL' 1" }}></a> */}
                     <span className="text-xs font-bold">4.5</span>
                 </div>
             </div>

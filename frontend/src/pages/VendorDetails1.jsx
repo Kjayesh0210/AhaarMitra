@@ -1,6 +1,6 @@
 import React from "react";
 
-const VendorDetails = () => {
+const VendorDetails1 = () => {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white text-gray-900 font-[Manrope]">
 
@@ -218,4 +218,4 @@ const VendorDetails = () => {
   );
 };
 
-export default VendorDetails;
+export default VendorDetails1;
