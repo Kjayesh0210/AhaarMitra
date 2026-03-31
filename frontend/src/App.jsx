@@ -20,6 +20,7 @@ import VendorDetails1 from './Userpages/VendorDetails1.jsx';
 import RegisterProvider1 from './VendorPages/RegisterProvider1.jsx';
 import BusinessDetails2 from './VendorPages/BusinessDetails2.jsx';
 import PayoutSetup3 from './VendorPages/PayoutSetup3.jsx';
+import ScrollToTop from './utils/ScrollToTop.jsx';
 
 const App = () => {
   return (
@@ -27,9 +28,14 @@ const App = () => {
       
       {/* Navbar */}
       <NavBar />
+<<<<<<< HEAD
+      <div className=''>
+        <ScrollToTop />
+=======
 
       {/* Main Content */}
       <div className="flex-grow">
+>>>>>>> 6bb278d25f050ab9d929ea5a528c7c98da3e9ba9
         <Routes>
           <Route path="/1" element={<VendorDetails1 />} />
           <Route path="/2" element={<TiffinTrial2 />} />
