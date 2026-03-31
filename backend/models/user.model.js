@@ -16,15 +16,22 @@ const userSchema = new mongoose.Schema({
   password: String,
 
   addresses: [
-    {
-      label: String,
-      street: String,
-      city: String,
-      state: String,
-      pincode: String,
-      isDefault: { type: Boolean, default: false }
+  {
+    street: String,       
+    city: String,
+    state: String,
+    pincode: String,  
+    instructions: String, 
+    label: {
+      type: String, 
+      default: "Home"
+    }, 
+    isDefault: {
+      type: Boolean,
+      default: false
     }
-  ],
+  }
+],
 
   registrationStep: {
     type: Number,
