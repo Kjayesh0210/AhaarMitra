@@ -36,7 +36,7 @@ export const sendOTP = async (phone) => {
       appVerifier
     );
 
-    alert("Use OTP: 123456"); //  for test mode
+    alert("Use OTP: 123456"); //  for test 
 
     return true;
   } catch (err) {
