@@ -3,7 +3,7 @@ import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 
 let confirmationResult;
 
-// ✅ Setup Recaptcha
+// Setup Recaptcha
 
 const setupRecaptcha = () => {
   if (!window.recaptchaVerifier) {
