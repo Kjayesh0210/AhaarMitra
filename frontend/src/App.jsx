@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './Userpages/NavBar.jsx'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Footer from './components/Footer.jsx'
 
 // User Pages
@@ -21,21 +21,29 @@ import RegisterProvider1 from './VendorPages/RegisterProvider1.jsx';
 import BusinessDetails2 from './VendorPages/BusinessDetails2.jsx';
 import PayoutSetup3 from './VendorPages/PayoutSetup3.jsx';
 import ScrollToTop from './utils/ScrollToTop.jsx';
+import Loader from './components/Loader.jsx';
 
 const App = () => {
+  const location = useLocation();
+  const hideNavbarRoutes = ["/11", "/13","/14","/v1","/v2","/v3"];
+  const shouldShowNavbar = !hideNavbarRoutes.includes(location.pathname);
+
+  const [isLoading, setIsLoading] = React.useState(true);
+
+
   return (
     <div className="min-h-screen flex flex-col">
-      
+
       {/* Navbar */}
-      <NavBar />
-<<<<<<< HEAD
+       {shouldShowNavbar && <NavBar />}
+      {/* {isLoading && <Loader />} */}
       <div className=''>
         <ScrollToTop />
-=======
+      </div>
 
       {/* Main Content */}
       <div className="flex-grow">
->>>>>>> 6bb278d25f050ab9d929ea5a528c7c98da3e9ba9
+
         <Routes>
           <Route path="/1" element={<VendorDetails1 />} />
           <Route path="/2" element={<TiffinTrial2 />} />
@@ -57,7 +65,7 @@ const App = () => {
       </div>
 
       {/* Footer */}
-      <Footer />
+      {shouldShowNavbar && <Footer />}
 
     </div>
   );
