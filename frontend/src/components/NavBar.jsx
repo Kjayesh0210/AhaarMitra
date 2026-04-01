@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ahaarmitraLogo from '../../assets/ahaarMitraLogo.svg';
 const NavBar = () => {
   return (
-       <div className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 h-16 px-6 md:px-12 flex justify-between items-center">
+       <div className="fixed top-10 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 h-16 px-6 md:px-12 flex justify-between items-center">
         <div className=" lg:w-60 md:w-40 w-32">
           <img src={ahaarmitraLogo} alt="" />
         </div>
